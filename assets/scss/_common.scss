@@ -31,3 +31,11 @@ a {
 li {
   line-height: 1.5;
 }
+
+.container {
+  display: flex;
+  margin-bottom: 50px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
