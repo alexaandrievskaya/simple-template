@@ -581,11 +581,95 @@ li {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.main {
+  background-color: #efefef;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  background-color: #efefef;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.left-sidebar {
+  position: relative;
+  background-color: #efefef;
+}
+
+.left-sidebar::after {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  height: 90%;
+  content: "";
+  border-right: 1px solid #dddddd;
+}
+
+.bottom-sidebar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+  padding: 15px;
+  background-color: #efefef;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.bottom-sidebar::before {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  content: "";
+  background-color: #dddddd;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 @media (min-width: 769px) {
   .menu {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 200px;
             flex: 1 0 200px;
+  }
+  .main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(100% - 300px);
+            flex: 1 0 calc(100% - 300px);
+    padding: 0 20px 15px 15px;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .left-sidebar {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 300px;
+            flex: 0 0 300px;
+    padding: 0 15px 15px 20px;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 

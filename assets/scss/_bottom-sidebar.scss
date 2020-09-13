@@ -1,0 +1,19 @@
+.bottom-sidebar {
+  position: relative;
+  display: flex;
+  flex: 1 0 100%;
+  padding: 15px;
+  background-color: $light-color;
+  flex-wrap: wrap;
+  order: 4;
+
+  &::before {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    content: "";
+    background-color: #dddddd;
+  }
+}

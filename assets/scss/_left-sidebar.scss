@@ -1,0 +1,19 @@
+.left-sidebar {
+  position: relative;
+  background-color: $light-color;
+
+  @include min-sm {
+    flex: 0 0 300px;
+    padding: 0 15px 15px 20px;
+    order: 2;
+  }
+
+  &::after {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    height: 90%;
+    content: "";
+    border-right: 1px solid #dddddd;
+  }
+}

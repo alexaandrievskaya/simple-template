@@ -1,0 +1,9 @@
+.main {
+  background-color: $light-color;
+
+  @include min-sm {
+    flex: 1 0 calc(100% - 300px);
+    padding: 0 20px 15px 15px;
+    order: 3;
+  }
+}
