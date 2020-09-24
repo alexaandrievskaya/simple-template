@@ -16,4 +16,36 @@
     content: "";
     border-right: 1px solid #dddddd;
   }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    position: relative;
+    padding: 7.5px;
+    list-style: none;
+    color: $base-color;
+    font-style: italic;
+
+    &::before {
+      position: absolute;
+      margin-left: -15px;
+      content: url(../img/main-list-arrow.png);
+    }
+
+    span {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        left: 0;
+        height: 1px;
+        content: "";
+        background-color: #dddddd;
+      }
+    }
+  }
 }

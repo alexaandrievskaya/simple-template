@@ -39,3 +39,32 @@ li {
   background: rgba(255, 255, 255, 0.1);
   flex-wrap: wrap;
 }
+
+img {
+  border-style: none;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+p {
+  color: $base-color;
+  line-height: 1.75;
+}
+
+h2 {
+  margin: 10px 0;
+  color: $accent-color;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+li {
+  line-height: 1.5;
+}
+
+i {
+  color: #424242;
+}
