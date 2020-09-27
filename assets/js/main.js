@@ -1,4 +1,3 @@
-
 $('.menu__btn').on('click', function () {
     $(this).toggleClass('active').
     next().
@@ -40,3 +39,4 @@ let prevClickHandler = () => {
 
 $nextBtn.on('click', nextClickHandler);
 $prevBtn.on('click', prevClickHandler);
+

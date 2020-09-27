@@ -7,6 +7,30 @@
   .wrapper {
     display: flex;
     margin-top: 37px;
+
+    @include sm-max {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-left {
+    @include lg-small {
+      flex: 0 0 60%;
+    }
+
+    @include sm-max {
+      flex: 1 0 100%;
+    }
+  }
+
+  &-right {
+    @include lg-small {
+      flex: 0 0 40%;
+    }
+
+    @include sm-max {
+      flex: 1 0 100%;
+    }
   }
 
   .twitter {
@@ -69,6 +93,16 @@
       margin: 57px 15px 15px 15px;
       text-align: right;
     }
+
+    @include lg-small {
+      margin: 75px 15px 15px 15px;
+      text-align: right;
+    }
+
+    @include sm-max {
+      margin: 30px 15px 15px 15px;
+      text-align: center;
+    }
   }
 
   &-logo {
@@ -76,6 +110,20 @@
 
     @include min-sm {
       text-align: right;
+    }
+    @include sm-max {
+      text-align: center;
+    }
+  }
+
+  .menu__btn {
+    display: none;
+  }
+
+  .menu__list {
+    @include lg-max {
+      top: initial;
+      bottom: 100%;
     }
   }
 }

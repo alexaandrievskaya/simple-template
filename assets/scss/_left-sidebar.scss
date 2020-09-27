@@ -8,6 +8,12 @@
     order: 2;
   }
 
+  @include sm-max {
+    flex: 1 0 100%;
+    padding: 0 20px 20px 20px;
+    order: 3;
+  }
+
   &::after {
     position: absolute;
     top: 15px;

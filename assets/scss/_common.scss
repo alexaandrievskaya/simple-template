@@ -9,12 +9,22 @@ html {
 }
 
 body {
+  margin: 0;
   display: flex;
   flex-direction: column;
   background: url(../img/background.jpg);
   background-color: #3a3a3a;
   background-position: 50% 0;
   align-items: center;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
 }
 
 .wrapper {

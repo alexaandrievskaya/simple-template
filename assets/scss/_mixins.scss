@@ -16,3 +16,21 @@
     @content;
   }
 }
+
+@mixin lg-max {
+  @media (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin lg-small {
+  @media (max-width: $large) and (min-width: $small + 1) {
+    @content;
+  }
+}
+
+@mixin sm-max {
+  @media (max-width: $small) {
+    @content;
+  }
+}

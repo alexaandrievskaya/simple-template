@@ -7,6 +7,12 @@
     order: 3;
   }
 
+  @include sm-max {
+    flex: 1 0 100%;
+    padding: 20px;
+    order: 2;
+  }
+
   p {
     text-align: justify;
   }

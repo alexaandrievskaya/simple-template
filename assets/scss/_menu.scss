@@ -1,11 +1,17 @@
 .menu {
   position: relative;
   z-index: 9;
+
   display: flex;
+
   justify-content: flex-end;
 
   @include min-sm {
     flex: 1 0 200px;
+  }
+
+  @include sm-max {
+    flex: 1 0 50px;
   }
 
   &__btn {
@@ -14,12 +20,42 @@
     height: 50px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.25);
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
     align-items: center;
+    justify-content: center;
 
     @include min-lg {
       display: none;
+    }
+
+    @include lg-max {
+      display: flex;
+    }
+
+    &-row {
+      position: relative;
+      width: 60%;
+      height: 2px;
+      margin: 2px 0;
+      transition: all 0.5s;
+      background-color: #ffffff;
+    }
+
+    &.active .menu__btn-row {
+      &:first-of-type {
+        top: 6px;
+
+        transform: rotate(-135deg);
+      }
+
+      &:last-of-type {
+        top: -6px;
+
+        transform: rotate(-225deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
     }
   }
 
@@ -30,6 +66,19 @@
     padding: 0;
     list-style: none;
     align-items: center;
+
+    @include lg-max {
+      position: absolute;
+      z-index: -999;
+      top: 100%;
+      right: -15px;
+      visibility: hidden;
+      flex-direction: column;
+      width: 100vw;
+      transition: opacity 0.5s;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
     &-item {
       display: block;
@@ -50,6 +99,24 @@
 
       &:hover:not(.active) a {
         background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    &.active {
+      z-index: 1;
+      visibility: visible;
+      opacity: 1;
+
+      .menu__list-item {
+        width: 100%;
+        margin: 0;
+        text-align: center;
+      }
+
+      a {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0;
       }
     }
   }
